@@ -1,0 +1,33 @@
+#FirstHeading{
+    padding: 0 100 0;
+    color: black;
+    text-align: center;
+}
+.first{
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    left: 40%;
+    top: 150px;
+    border-style: solid;
+    border-width: 1.2px;
+    border-radius: 5px;
+   
+}
+.elements{
+    margin: 20px;
+    padding : 1px;
+    text-align: left;
+
+}
+.button{
+    margin-bottom: 15px;
+    width:80%;
+}
+.button:hover{
+    background-color: turquoise;
+
+}
+.box{
+    width: 75%;
+}

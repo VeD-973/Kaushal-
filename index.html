@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voter Detais</title>
+    <link rel ="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="msg"></h1>
+    <form id="voterDetails" method='post' action="https://script.google.com/macros/s/AKfycbziP_K2bFuyldGjgh9xk4T-j_AOvhm3_eoXDcIP1g0e08PwvdbQ2o19ksCIP0SdWETH/exec">
+        <h1 id="FirstHeading">Voter details</h1>
+        <div class="first">
+            <div class="elements"><label for="first_name">First Name</label>
+                <input class="box" type="text" id="first_name" name="first_name" required>
+            </div>
+            <div class="elements"><label for="last_name">Last Name</label>
+                <input class="box" type="text" id="last_name" name="last_name" required>
+            </div>
+            <div class="elements">
+                <label for="roll_no" id="roll_no" name="roll_no" required>Roll Number</label>
+                <input class="box" type="number" id="roll_no" name="roll_no" min="10000000" max="99999999" required>
+            </div>
+            <div class="elements"><p>Gender:
+                <input type="radio" id="male" name="gender" required value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" required value="female">
+                <label for="female">Female</label>
+                <input type="radio" id="Others" name="gender" required value="Others">
+                <label for="Others">Others</label></p>
+            </div>
+            <div class="elements">  <label for="email">Email: </label>
+                <input class="box" type="email" id="email" name="email" required>
+            </div>
+        
+        
+        <button class="button" id="sub" onclick="Openpopup()">Submit</button>
+        </div>
+
+    </form>
+    <script>
+        let popup= document.getElementById("popup");
+        function Openpopup(){
+            alert("Your form has been submitted!");
+
+        }
+        function Closepopup(){
+            popup.classList.remove("open-popup");
+
+        }
+       
+    </script>
+    
+</body>
+
+
+
+<!-- <script>
+    let form=document.querySelector("form");
+    form.addEventListener('submit',(e)=>{
+          e.preventDefault();
+          document.querySelector("#sub").value="submiting...";
+          let data=new FormData(form);
+          fetch("https://script.google.com/macros/s/AKfycbwJkBZWkqYAGOBx4WxHPD1_F0ptIioBwY5ot3cySGCjLQCGRM63DSdiFVNilQGw0Pqg/exec",{
+            method:"post",body:data
+          })
+          .then(res=>res.text())
+          .then(data=>console.log(data));
+    })
+</script> -->
+</html> 
